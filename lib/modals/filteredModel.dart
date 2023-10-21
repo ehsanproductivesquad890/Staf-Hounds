@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class FilterModel {
   Color? color;
   String? title;
+  String? image;
   String? loc;
   String? duration;
   String? day;
@@ -11,6 +12,7 @@ class FilterModel {
   FilterModel({
     this.color,
     this.title,
+    this.image,
     this.loc,
     this.duration,
     this.day,

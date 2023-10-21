@@ -6,6 +6,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import 'package:staff_hound/Common/AppColor.dart';
 import 'package:staff_hound/modals/HomeJobModel.dart';
+import 'package:staff_hound/Screens/jobs/Filtered.dart';
+
 
 
 
@@ -58,30 +60,35 @@ class Home extends StatelessWidget {
                       ),
                       itemCount: homeJobList.length,
                       itemBuilder: (context, index) {
-                        return Card(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Material(
-                                
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(100)
-                                ),
-                                elevation: 15,
-                                child: SizedBox(
-                                  height: media.height*0.08,
-                                  width: media.width*0.16,
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: SvgPicture.asset('${homeJobList[index].icon}',),
-                                  ))),
-                                  SizedBox(height: media.height*0.01,),
-                              Center(child: Text(homeJobList[index].title.toString(),style: 
-                              TextStyle(
-                                color: AppColors.darkBlue
-                              ),)),
-                            ],
+                        return InkWell(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (_)=>Filtered()));
+                          },
+                          child: Card(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Material(
+                                  
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(100)
+                                  ),
+                                  elevation: 15,
+                                  child: SizedBox(
+                                    height: media.height*0.08,
+                                    width: media.width*0.16,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: SvgPicture.asset('${homeJobList[index].icon}',),
+                                    ))),
+                                    SizedBox(height: media.height*0.01,),
+                                Center(child: Text(homeJobList[index].title.toString(),style: 
+                                TextStyle(
+                                  color: AppColors.darkBlue
+                                ),)),
+                              ],
+                            ),
                           ),
                         );
                       },

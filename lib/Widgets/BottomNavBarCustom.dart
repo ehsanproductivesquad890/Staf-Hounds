@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:staff_hound/home/home.dart';
 import 'package:staff_hound/Common/AppColor.dart';
+import 'package:staff_hound/Screens/jobs/Jobs.dart';
 import 'package:staff_hound/Screens/jobs/Filtered.dart';
 import 'package:staff_hound/Screens/profile/Profile.dart';
 import 'package:staff_hound/Screens/notification/Notification.dart';
@@ -24,7 +25,7 @@ class _BottomBarCusState extends State<BottomNavBarCustom> {
   final List<Widget> classes = [
     Home(),
     // Filtered(),
-    Filtered(),
+    Jobs(),
     Notifications(),
     Profile(),
     // Profile(),

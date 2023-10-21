@@ -2,7 +2,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import 'package:staff_hound/Common/AppColor.dart';
 import 'package:staff_hound/Widgets/EmptyAppBar.dart';
+import 'package:staff_hound/Screens/profile/Components/AddSkills.dart';
 import 'package:staff_hound/Screens/profile/Components/Education.dart';
+import 'package:staff_hound/Screens/profile/Components/Experience.dart';
 class ProfileSetting extends StatelessWidget {
   const ProfileSetting({super.key});
   @override
@@ -106,12 +108,18 @@ class ProfileSetting extends StatelessWidget {
                     ),
                     ProfileSettingTile(
                       title: 'Add Skills',
+                      onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (_)=>AddSkills()));
+                      },
                     ),
                     SizedBox(
                       height: media.height * 0.015,
                     ),
                     ProfileSettingTile(
                       title: 'Add Experience',
+                      onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (_)=>Experience()));
+                      },
                     ),
                   ],
                 ),
@@ -146,6 +154,7 @@ class ProfileSettingTile extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.darkBlue,
           borderRadius: BorderRadius.circular(10),
+          border: Border.all(color: AppColors.orange)
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

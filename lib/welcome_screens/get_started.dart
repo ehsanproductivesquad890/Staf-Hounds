@@ -13,11 +13,17 @@ class GetStarted extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            SizedBox(
+              height: 10,
+            ),
             Image.asset(
               'images/illustration.png',
               width: 330,
               height: 300,
             ),
+            // SizedBox(
+            //   height: 5,
+            // ),
             Column(
               children: [
                 Text(

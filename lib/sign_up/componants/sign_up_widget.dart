@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:staff_hound/sign_up/componants/email_tf.dart';
-import 'package:staff_hound/sign_up/componants/gender_tf.dart';
-import 'package:staff_hound/sign_up/componants/name_tf.dart';
-import 'package:staff_hound/sign_up/componants/password_tf.dart';
-import 'package:staff_hound/sign_up/componants/phone_tf.dart';
-import 'package:staff_hound/sign_up/componants/sign_up_btn.dart';
-
 import '../../app_theme/constants.dart';
+import 'package:staff_hound/Common/AppColor.dart';
+import 'package:staff_hound/sign_up/componants/name_tf.dart';
+import 'package:staff_hound/sign_up/componants/email_tf.dart';
+import 'package:staff_hound/sign_up/componants/phone_tf.dart';
+import 'package:staff_hound/sign_up/componants/gender_tf.dart';
+import 'package:staff_hound/sign_up/componants/password_tf.dart';
+import 'package:staff_hound/sign_up/componants/sign_up_btn.dart';
+import 'package:staff_hound/Screens/profile/Components/TextFieldCustom.dart';
 
 class SignUpWidget extends StatelessWidget {
   const SignUpWidget({Key? key}) : super(key: key);
@@ -59,9 +60,23 @@ class SignUpWidget extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          PhoneTF(),
-          const SizedBox(
-            height: 20,
+          // PhoneTF(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [],
+          ),
+          SizedBox(width: 20),
+          Container(
+            width: 20,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.darkPurple)),
+            child: TextFieldCustom(
+              hint: 'Phone Number',
+            ),
+          ),
+          SizedBox(
+            height: 10,
           ),
           const SignUpBtn(),
         ],

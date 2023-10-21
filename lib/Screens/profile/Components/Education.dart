@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:staff_hound/Common/AppColor.dart';
 import 'package:staff_hound/Widgets/EmptyAppBar.dart';
 import 'package:staff_hound/Screens/profile/ProfileSetting.dart';
+import 'package:staff_hound/Screens/profile/Components/AddSkills.dart';
 import 'package:staff_hound/Screens/profile/Components/TextFieldCustom.dart';
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
@@ -96,6 +97,9 @@ class Educations extends StatelessWidget {
                       width: media.width * 0.5,
                       child: ProfileSettingTile(
                         title: 'Save',
+                        onTap: (){
+                          
+                        },
                       ),
                     ),
                      SizedBox(
@@ -128,10 +132,7 @@ class Educations extends StatelessWidget {
                               SizedBox(
                                 width: media.width * 0.02,
                               ),
-                              // SvgPicture.asset(
-                              //   '${icon}',
-                              //   height: media.height * 0.035,
-                              // )
+                             
                             ],
                           ),
                         ),
